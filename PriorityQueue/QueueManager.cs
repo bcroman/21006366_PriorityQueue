@@ -56,6 +56,7 @@ namespace PriorityQueue
         //Call UnsortedArrayQueue Class
         private void InitUnsortedArrayQueue()
         {
+            queue = new UnsortedArrayPriorityQueue<Person>(8);
             Lbl_Output.Text = "New unsorted array priority queue created";
         }
 
