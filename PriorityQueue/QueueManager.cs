@@ -23,16 +23,58 @@ namespace PriorityQueue
             Panel_Actions.Visible = true;
             Panel_Output.Visible = true;
 
-            if (CB_Implementation.SelectedIndex == 0)
+            //Select Queue Type
+            if (CB_Implementation.SelectedIndex == 0) //Sorted Array
             {
                 InitSortedArrayQueue();
             }
+            else if (CB_Implementation.SelectedIndex == 1) //Unsorted Array
+            {
+                InitUnsortedArrayQueue();
+            }
+            else if (CB_Implementation.SelectedIndex == 2) //Sorted Linked
+            {
+                InitSortedLinkedQueue();
+            }
+            else if (CB_Implementation.SelectedIndex == 3) //Unsorted Linked
+            {
+                InitUnsortedLinkedQueue();
+            }
+            else if (CB_Implementation.SelectedIndex == 4) //Heap
+            {
+                InitHeapQueue();
+            }
         }
-        
+
+        //Call SortedArrayQueue Class
         private void InitSortedArrayQueue()
         {
             queue = new SortedArrayPriorityQueue<Person>(8);
             Lbl_Output.Text = "New sorted array priority queue created";
+        }
+
+        //Call UnsortedArrayQueue Class
+        private void InitUnsortedArrayQueue()
+        {
+            Lbl_Output.Text = "New unsorted array priority queue created";
+        }
+
+        //Call SortedLinkedQueue Class
+        private void InitSortedLinkedQueue()
+        {
+            Lbl_Output.Text = "New sorted linked priority queue created";
+        }
+
+        //Call UnsortedLinkedQueue Class
+        private void InitUnsortedLinkedQueue()
+        {
+            Lbl_Output.Text = "New unsorted linked priority queue created";
+        }
+
+        //Call HeapQueue Class
+        private void InitHeapQueue()
+        {
+            Lbl_Output.Text = "New heap priority queue created";
         }
 
         private void Btn_AddQueue_Click(object sender, System.EventArgs e)
