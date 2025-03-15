@@ -63,6 +63,7 @@ namespace PriorityQueue
         //Call SortedLinkedQueue Class
         private void InitSortedLinkedQueue()
         {
+            queue = new SortedLinkedPriorityQueue<Person>(8);
             Lbl_Output.Text = "New sorted linked priority queue created";
         }
 
