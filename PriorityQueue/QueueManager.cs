@@ -77,6 +77,7 @@ namespace PriorityQueue
         //Call HeapQueue Class
         private void InitHeapQueue()
         {
+            queue = new HeapPriorityQueue<Person>(8);
             Lbl_Output.Text = "New heap priority queue created";
         }
 
