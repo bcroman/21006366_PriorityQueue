@@ -60,7 +60,7 @@ namespace PriorityQueue
             storage[count] = new PriorityItem<T>(item, priority);
             count++;
 
-            // Heapify up
+            // Call Heapify up Method
             HeapifyUp(count - 1);
         }
 
@@ -88,7 +88,7 @@ namespace PriorityQueue
             storage[0] = storage[count - 1];
             count--;
 
-            // Heapify down
+            // Class Heapify Down Method
             HeapifyDown(0);
         }
 
@@ -116,6 +116,10 @@ namespace PriorityQueue
             return result;
         }
 
+        /// <summary>
+        /// Moves a new added element upward on the tree
+        /// </summary>
+        /// <param name="index">Index position for item</param>
         private void HeapifyUp(int index)
         {
             while (index > 0) // Continue until reaching the root
@@ -133,6 +137,10 @@ namespace PriorityQueue
             }
         }
 
+        /// <summary>
+        /// Update the root element and move other elements after root is deleted
+        /// </summary>
+        /// <param name="index">Index position for item</param>
         private void HeapifyDown(int index)
         {
             while (true)
@@ -147,7 +155,7 @@ namespace PriorityQueue
                     largest = leftChild;
                 }
 
-                // Compare right child (ensure max-heap)
+                // Compare right child
                 if (rightChild < count && storage[rightChild].Priority > storage[largest].Priority)
                 {
                     largest = rightChild;
@@ -165,11 +173,16 @@ namespace PriorityQueue
             }
         }
 
-        private void Swap(int i, int j)
+        /// <summary>
+        /// Swaps the frist and second item positions
+        /// </summary>
+        /// <param name="index1">Index position for frist item</param>
+        /// <param name="index2">Index position for second item</param>
+        private void Swap(int index1, int index2)
         {
-            PriorityItem<T> temp = storage[i]; // Store first item in temp
-            storage[i] = storage[j]; // Move second item to first position
-            storage[j] = temp; // Move temp (first item) to second position
+            PriorityItem<T> temp = storage[index1]; // Store first item in temp
+            storage[index1] = storage[index2]; // Move second item to first position
+            storage[index2] = temp; // Move temp to second position
         }
     }
 }
