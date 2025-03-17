@@ -70,6 +70,7 @@ namespace PriorityQueue
         //Call UnsortedLinkedQueue Class
         private void InitUnsortedLinkedQueue()
         {
+            queue = new UnsortedLinkedPriorityQueue<Person>(8);
             Lbl_Output.Text = "New unsorted linked priority queue created";
         }
 
