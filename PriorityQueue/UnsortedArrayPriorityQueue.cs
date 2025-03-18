@@ -94,7 +94,7 @@ namespace PriorityQueue
         {
             if (IsEmpty()) //Check if queue is empty
             {
-                throw new QueueUnderflowException("No items to display"); //Error  Message
+                return "No Items in Queue!";
             }
 
             //Loop through queue and display into a string format

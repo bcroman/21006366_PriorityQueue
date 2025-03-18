@@ -65,7 +65,7 @@ namespace PriorityQueue
         {
             if (IsEmpty())
             {
-                throw new QueueUnderflowException("No items to display");
+                return "No Items in Queue!";
             }
 
             string result = "[";

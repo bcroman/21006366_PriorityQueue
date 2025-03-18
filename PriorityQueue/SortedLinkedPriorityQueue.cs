@@ -134,7 +134,7 @@ namespace PriorityQueue
         {
             if (IsEmpty()) //check if queue is empty
             {
-                return "Queue is empty."; //error message
+                return "No Items in Queue!";
             }
 
             //Loop through queue and display into a string format
